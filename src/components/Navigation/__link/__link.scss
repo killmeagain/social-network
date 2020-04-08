@@ -1,0 +1,45 @@
+&__link {
+    display: block;
+    width: 100%;
+
+    position: relative;
+
+    padding: 15px 0;
+
+    text-decoration: none;
+
+    font-family: $raleway;
+    font-size: $middleTitle;
+    font-weight: 700;
+    line-height: $middleTitleLineHeight;
+
+    color: $darkShadeGray;
+
+    transition: 0.2s ease-in-out;
+
+    box-sizing: border-box;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        right: 15%;
+
+        width: 70%;
+        height: 3px;
+
+        transform: scale(0);
+
+        background-color: $darkShadeBlack;
+        transition: 0.2s ease-in-out;
+    }
+
+    &:hover {
+        &:after {
+            transform: scale(1);
+            transition: 0.2s ease-in-out;
+        }
+        transition: 0.2s ease-in-out;
+    }
+}

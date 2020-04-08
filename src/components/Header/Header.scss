@@ -1,0 +1,12 @@
+.header {
+    width: 100%;
+
+    padding: 10px 0;
+
+    background-color: $darkShadeBlack;
+
+    @import "./__container/__container.scss";
+    @import "./__text/__text.scss";
+    @import "./__content/__content.scss";
+    @import "./__logo/__logo.scss";
+}
