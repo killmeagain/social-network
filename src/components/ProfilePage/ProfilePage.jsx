@@ -12,7 +12,7 @@ const ProfilePage = () => {
 			<div className="profile-page__posts">
 				<Posts />
 			</div>
-			
+
 		</div>
 	)
 }

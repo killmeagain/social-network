@@ -1,0 +1,11 @@
+.post {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    @import "./__avatar/__avatar";
+    @import "./__img/__img";
+    @import "./__name/__name";
+    @import "./__information/__information";
+    @import "./__text/__text";
+}
