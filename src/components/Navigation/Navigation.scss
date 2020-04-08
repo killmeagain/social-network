@@ -1,9 +1,15 @@
 .main-navigation {
     width: 25%;
-    height: 100vh;
 
     margin: 0;
     padding: 0;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 1px 1px 10px 3px rgba(109, 109, 109, 0.3);
 
     @import "./__list/__list";
     @import "./__link/__link";

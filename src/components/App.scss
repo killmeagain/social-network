@@ -1,13 +1,30 @@
 @import "./Header/Header.scss";
 @import "./Navigation/Navigation.scss";
+@import "./ProfileAvatar/ProfileAvatar.scss";
+@import "./Posts/Posts.scss";
 
 
 .social-network {
-    &__content {
+    &__container {
         max-width: 1200px;
         width: 100%;
 
         margin: 0 auto;
         padding-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__content {
+        width: 70%;
+        background-color: #fff;
+        border-radius: 10px;
+
+        box-sizing: border-box;
+        padding: 15px;
+
+        box-shadow: 1px 1px 10px 3px rgba(109, 109, 109, 0.3);
     }
 }
