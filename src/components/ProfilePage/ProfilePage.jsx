@@ -8,9 +8,12 @@ const ProfilePage = (props) => {
 			<div className="profile-page__avatar">
 				<ProfileAvatar />
 			</div>
-
+			
 			<div className="profile-page__posts">
-				<Posts posts={props.profile.posts} />
+				<Posts 
+					postMessage={props.profile.postMessage} 
+					posts={props.profile.posts} 
+					dispatch={props.dispatch} />
 			</div>
 
 		</div>

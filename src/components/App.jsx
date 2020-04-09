@@ -13,7 +13,9 @@ const App = (props) => {
 				<div className="social-network__container">
 					<Navigation />
 					<div className="social-network__content">
-						<Route path="/profile" render={() => <ProfilePage profile={props.state.profilePage}/>}/>
+						<Route path="/profile" render={() => <ProfilePage 
+																profile={props.state.profilePage} 
+																dispatch={props.dispatch} />}/>
 						<Route path="/dialogs" render={() => <Dialogs dialogs={props.state.dialogsPage} />}/>
 					</div>
 				</div>
