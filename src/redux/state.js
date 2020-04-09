@@ -1,3 +1,6 @@
+import dialogsReducer from "./dialogs-reducer";
+import profileReducer from "./profile-reducer";
+
 let store = {
     _state: {
         profilePage: {
@@ -9,6 +12,7 @@ let store = {
         },
     
         dialogsPage: {
+            messageText: '',
             messages: [
                 { message: "Привет!" },
                 { message: "Как дела?" },
@@ -33,27 +37,10 @@ let store = {
         this.rerenderEntireTree = observer;
     },
     dispatch(action) {
-        switch (action.type) {
-            case "ADD-POST":
-                let newPost = {
-                    id: this._state.profilePage.posts.length++,
-                    post: this._state.profilePage.postMessage
-                }
-            
-                this._state.profilePage.postMessage = '';
-            
-                this._state.profilePage.posts.push(newPost);
-            
-                this.rerenderEntireTree();
-                break;
-            case "UPDATE-NEW-POST-TEXT":
-                this._state.profilePage.postMessage = action.message;
-    
-                this.rerenderEntireTree();
-                break;
-            default:
-                return;
-        }
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+
+        this.rerenderEntireTree();
     }
 }
 

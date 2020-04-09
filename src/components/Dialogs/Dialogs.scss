@@ -2,8 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    min-height: 80vh;
 
     @import "./__dialogs-list/__dialogs-list";
     @import "./__messages-list/__messages-list";
     @import "./__messages-item/__messages-item";
+    @import "./__message-form/__message-form";
+    @import "./__message-container/__message-container";
+    @import "./__textfield/__textfield";
+    @import "./__send-button/__send-button";
 }

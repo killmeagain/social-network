@@ -1,0 +1,32 @@
+&__send-button {
+    border: none;
+
+    background-color: $green;
+
+    font-size: 16px;
+    font-family: $raleway;
+    font-weight: 700;
+    line-height: 25px;
+
+    color: white;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 10px 25px;
+
+    cursor: pointer;
+
+    border-radius: 25px;
+
+    transition: 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+        transition: 0.2s;
+    }
+
+    &:active {
+        background-color: rgba(0, 179, 0, 0.678);
+    }
+}

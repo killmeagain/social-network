@@ -1,15 +1,18 @@
 
 import './scss/main.scss'
-import store from './redux/state'
+import store from './redux/store'
 import React from 'react';
 import ReactDOM from 'react-dom'
 import App from './components/App'
 
 
-let rerenderEntireTree = () => {
-    ReactDOM.render(<App state={ store.getState() } dispatch={ store.dispatch.bind(store) } /> , document.querySelector("#root"));
+let rerenderEntireTree = (state) => {
+    ReactDOM.render(<App state={ state} dispatch={ store.dispatch.bind(store) } /> , document.querySelector("#root"));
 }
 
-rerenderEntireTree();
+rerenderEntireTree(store.getState());
 
-store.subcribe(rerenderEntireTree);
+store.subscribe(() => {
+    let state = store.getState();
+    rerenderEntireTree(state);
+});

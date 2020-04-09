@@ -1,0 +1,15 @@
+&__message-container {
+    width: 65%;
+    min-height: 80vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+
+    border-left: 1px solid $darkShadeFourth;
+    padding: 0 0 0 40px;
+    box-sizing: border-box;
+
+    position: relative;
+}
