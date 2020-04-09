@@ -9,7 +9,7 @@
 
     color: $darkShadeBlack;
 
-    border: 1px solid $darkShadeBlack;
+    border: 1px solid $darkShadeHalf;
     border-radius: 10px;
 
     width: 100%;
@@ -22,4 +22,11 @@
     margin-bottom: 15px;
 
     display: block;
+
+    outline: none;
+
+    &:hover,
+    &:focus {
+        border-color: $darkShadeBlack;
+    }
 }
