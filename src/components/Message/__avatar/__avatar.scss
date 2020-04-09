@@ -1,0 +1,12 @@
+&__avatar {
+    width: 40px;
+    height: 40px;
+
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid $green;
+
+    position: relative;
+
+    margin-right: 20px;
+}

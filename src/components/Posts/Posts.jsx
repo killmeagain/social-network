@@ -2,7 +2,7 @@ import React from 'react';
 import Post from '../Post/Post';
 
 
-const Posts = () => {
+const Posts = (props) => {
 	return (
 		<div className="posts">
 			<h2 className="posts__title">Мои записи на стене</h2>
@@ -11,9 +11,12 @@ const Posts = () => {
 				<button className="posts__send-button" type="button">Отправить</button>
 			</div>
 			<ul className="posts__list">
-				<li className="posts__item">
-					<Post post = "Привет!" />
-				</li>
+				{props.posts.map( post => (
+					<li className="posts__item">
+						<Post post = {post.post} />
+					</li>
+				))}
+				
 			</ul>
 		</div>
 	)

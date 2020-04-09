@@ -1,0 +1,9 @@
+.dialogs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @import "./__dialogs-list/__dialogs-list";
+    @import "./__messages-list/__messages-list";
+    @import "./__messages-item/__messages-item";
+}

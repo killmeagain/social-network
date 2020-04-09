@@ -1,0 +1,17 @@
+&__text {
+    font-family: $raleway;
+    font-size: $body;
+    color: $darkShadeBlack;
+    line-height: 18px;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 10px 30px;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    background-color: rgba(122, 122, 122, 0.185);
+}

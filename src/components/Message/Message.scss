@@ -1,0 +1,12 @@
+.message {
+    display: flex;
+    align-items: center;
+
+    &__message {
+        width: 60%;
+    }
+
+    @import "./__avatar/__avatar";
+    @import "./__text/__text";
+    @import "./__img/__img";
+}

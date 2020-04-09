@@ -5,7 +5,7 @@ import ProfilePage from './ProfilePage/ProfilePage';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Dialogs from './Dialogs/Dialogs';
 
-const App = () => {
+const App = (props) => {
 	return (
 		<BrowserRouter>
 			<div className="social-network">
@@ -13,8 +13,8 @@ const App = () => {
 				<div className="social-network__container">
 					<Navigation />
 					<div className="social-network__content">
-						<Route path="/profile" component={ProfilePage}/>
-						<Route path="/dialogs" component={Dialogs}/>
+						<Route path="/profile" render={() => <ProfilePage profile={props.state.profilePage}/>}/>
+						<Route path="/dialogs" render={() => <Dialogs dialogs={props.state.dialogsPage} />}/>
 					</div>
 				</div>
 			</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import ProfileAvatar from '../ProfileAvatar/ProfileAvatar';
 import Posts from '../Posts/Posts';
 
-const ProfilePage = () => {
+const ProfilePage = (props) => {
 	return (
 		<div className="profile-page">
 			<div className="profile-page__avatar">
@@ -10,7 +10,7 @@ const ProfilePage = () => {
 			</div>
 
 			<div className="profile-page__posts">
-				<Posts />
+				<Posts posts={props.profile.posts} />
 			</div>
 
 		</div>

@@ -1,0 +1,21 @@
+&__name {
+    text-align: center;
+    text-decoration: none;
+
+    font-family: $raleway;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    color: $darkShadeBlack;
+
+    padding: 15px 25px;
+
+    display: block;
+
+    border-radius: 15px;
+
+    &:hover {
+        background-color: rgba(146, 146, 146, 0.26);
+    }
+}
