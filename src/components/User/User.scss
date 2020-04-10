@@ -1,0 +1,14 @@
+.user {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @import "./__avatar/__avatar";
+    @import "./__img/__img";
+    @import "./__information/__information";
+    @import "./__name/__name";
+    @import "./__location/__location";
+    @import "./__followed-button/__followed-button";
+}

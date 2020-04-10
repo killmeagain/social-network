@@ -6,6 +6,9 @@ const Navigation = () => {
 		<nav className="main-navigation">
 			<ul className="main-navigation__list">
 				<li className="main-navigation__item">
+					<NavLink className="main-navigation__link" to="/users" activeClassName="main-navigation__link_active">Все пользователи</NavLink>
+				</li>
+				<li className="main-navigation__item">
 					<NavLink className="main-navigation__link" to="/news" activeClassName="main-navigation__link_active">Новости</NavLink>
 				</li>
 

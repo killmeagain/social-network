@@ -1,0 +1,33 @@
+&__followed-button {
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    min-width: 250px;
+    padding: 20px 30px;
+
+    font-family: $raleway;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: white;
+    text-transform: uppercase;
+
+    border: none;
+
+    border-radius: 30px;
+    
+    cursor: pointer;
+
+    transition: 0.2s ease-in-out;
+
+
+    &:hover {
+        opacity: 0.8;
+
+        transition: 0.2s ease-in-out;
+    }
+}

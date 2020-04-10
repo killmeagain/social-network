@@ -1,0 +1,7 @@
+.users {
+    width: 100%;
+    min-height: 80vh;
+
+    @import "./__list/__list";
+    @import "./__item/__item";
+}
