@@ -1,8 +1,8 @@
 import React from 'react';
 import ProfileAvatar from '../ProfileAvatar/ProfileAvatar';
-import Posts from '../Posts/Posts';
+import PostsContainer from '../Posts/PostsContainer';
 
-const ProfilePage = (props) => {
+const ProfilePage = () => {
 	return (
 		<div className="profile-page">
 			<div className="profile-page__avatar">
@@ -10,10 +10,7 @@ const ProfilePage = (props) => {
 			</div>
 			
 			<div className="profile-page__posts">
-				<Posts 
-					postMessage={props.profile.postMessage} 
-					posts={props.profile.posts} 
-					dispatch={props.dispatch} />
+				<PostsContainer />
 			</div>
 
 		</div>

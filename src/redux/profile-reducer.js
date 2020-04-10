@@ -2,7 +2,6 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-
 // Action Creators
 export const ADD_POST_AC = () => ({
     type: ADD_POST
@@ -30,19 +29,22 @@ const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
             let newPost = {
-                id: state.posts.length++,
+                id: state.posts.length + 1,
                 post: state.postMessage
             }
 
-            state.postMessage = '';
-
-            state.posts.push(newPost);
-
-            return state;
+            return {
+                ...state,
+                postMessage: '',
+                posts: [...state.posts, newPost]
+            }
         case UPDATE_NEW_POST_TEXT:
             state.postMessage = action.message;
 
-            return state;
+            return {
+                ...state,
+                postMessage: action.message
+            }
         default:
             return state;
     }
