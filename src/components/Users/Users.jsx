@@ -1,6 +1,7 @@
 import React from 'react';
 import User from '../User/User';
 import Pagination from '../Pagination/Pagination';
+import Preloader from '../Preloader/Preloader';
 
 // Свойства:
 // users - список пользователей (Массив объектов)
@@ -15,6 +16,7 @@ import Pagination from '../Pagination/Pagination';
 // changePage - метод запроса на сервер для получение пользователей
 // setPaginationCouterIncrement - изменение счетчика пагинации в положительную сторону
 // setPaginationCouterDecrement - изменение счетчика пагинации в отрицательную сторону
+// isFetching - показатель прелоадера
 
 
 const Users = props => {
@@ -25,11 +27,12 @@ const Users = props => {
         currentPage,
         pageSize,
         paginationCounter,
+        isFetching,
         follow,
         unfollow,
         changePage,
         setPaginationCouterIncrement,
-        setPaginationCouterDecrement
+        setPaginationCouterDecrement,
     } = props;
 
     let listUsersArray = users.map(user => {
@@ -50,15 +53,17 @@ const Users = props => {
 
     return (
         <section className="users">
-            <ul className="users__list">
-                {listUsersArray}
-            </ul>
+            {isFetching && <Preloader />}
+            {!isFetching &&
+                <ul className="users__list">
+                    {listUsersArray}
+                </ul>
+            }
             <Pagination
                 totalCount={totalUsersCount}
                 currentPage={currentPage}
                 pageSize={pageSize}
                 paginationCounter={paginationCounter}
-
                 changePage={changePage}
                 setPaginationCouterIncrement={setPaginationCouterIncrement}
                 setPaginationCouterDecrement={setPaginationCouterDecrement}
