@@ -1,27 +1,38 @@
 import React from 'react';
 import User from '../User/User';
-import * as axios from 'axios'
+import Pagination from '../Pagination/Pagination';
+
+// Свойства:
+// users - список пользователей (Массив объектов)
+// totalUsersCount - общее количество пользователей с сервера
+// currentPage - текущая страница
+// pageSize - количество пользователей на странице
+// paginationCounter - счетчик пагинации
+
+// Методы:
+// follow - добавление в друзья
+// unfollow - удаление из друзей
+// changePage - метод запроса на сервер для получение пользователей
+// setPaginationCouterIncrement - изменение счетчика пагинации в положительную сторону
+// setPaginationCouterDecrement - изменение счетчика пагинации в отрицательную сторону
 
 
-const Users = (props) => {
-    // Деструктуризирую пропсы для компоненты
-    const { users, follow, unfollow, setUsers } = props;
+const Users = props => {
 
-    // const usersAPI = [
-    //     { id: 1, isFollowed: true, name: "Тимофей Судаков", status: 'Гурьевск' },
-    //     { id: 2, isFollowed: false, name: "Дмитрий Щеглов", status: 'Туринск' },
-    //     { id: 3, isFollowed: true, name: "Дмитрий Синенков", status: 'Озерск' },
-    //     { id: 4, isFollowed: false, name: "Артемий Багин", status: 'Киров' },
-    //     { id: 5, isFollowed: true, name: "Иван Матюшенко", status: 'Североуральск' },
-    // ];
-    
-    if(users.length === 0) {
-        axios.get('https://social-network.samuraijs.com/api/1.0/users')
-        .then(response => setUsers(response.data.items));
-    }
-    
-    // Мапим список массив юзеров в массив элементов JSX
-    const usersElements = users.map(user => {
+    const {
+        users,
+        totalUsersCount,
+        currentPage,
+        pageSize,
+        paginationCounter,
+        follow,
+        unfollow,
+        changePage,
+        setPaginationCouterIncrement,
+        setPaginationCouterDecrement
+    } = props;
+
+    let listUsersArray = users.map(user => {
         return (
             <li className="users__item">
                 <User
@@ -36,11 +47,22 @@ const Users = (props) => {
             </li>
         )
     })
+
     return (
         <section className="users">
             <ul className="users__list">
-                {usersElements}
+                {listUsersArray}
             </ul>
+            <Pagination
+                totalCount={totalUsersCount}
+                currentPage={currentPage}
+                pageSize={pageSize}
+                paginationCounter={paginationCounter}
+
+                changePage={changePage}
+                setPaginationCouterIncrement={setPaginationCouterIncrement}
+                setPaginationCouterDecrement={setPaginationCouterDecrement}
+            />
         </section>
     )
 }

@@ -1,0 +1,20 @@
+&__link {
+    text-decoration: none;
+    color: $darkShadeHalf;
+
+    display: inline-block;
+    padding: 12.5px 0;
+    width: 40px;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+    border: none;
+
+    @import "./_active/_active.scss";
+    @import "./_next/_next";
+    @import "./_down/_down";
+}

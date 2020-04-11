@@ -1,0 +1,15 @@
+.pagination {
+    max-width: 350px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @import "./__list/__list.scss";
+    @import "./__item/__item.scss";
+    @import "./__link/__link.scss";
+    @import "./__description/__description.scss";
+}

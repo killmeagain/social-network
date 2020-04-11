@@ -5,7 +5,7 @@ const User = (props) => {
     const { id, status, isFollowed, name, photo, follow, unfollow } = props;
     const avatar = photo || './assets/img/avatar.jpg';
     const userStatus = status || 'У этого пользователя нет статуса';
-
+    
     // Обработчик события onClick на кнопке подписки
     const hadlerFollowButtonClick = () => {
         follow(id);

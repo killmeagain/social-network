@@ -1,0 +1,16 @@
+&__item {
+    box-sizing: border-box;
+    
+    width: 40px;
+    height: 40px;
+
+    font-family: $raleway;
+    font-size: 12px;
+    line-height: 1.2;
+
+    text-align: center;
+
+    flex-shrink: 0;
+
+    margin-right: 10px;
+}

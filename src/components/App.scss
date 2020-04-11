@@ -9,6 +9,7 @@
 @import "./Message/Message.scss";
 @import "./User/User.scss";
 @import "./Users/Users.scss";
+@import "./Pagination/Pagination.scss";
 
 
 .social-network {
@@ -26,6 +27,7 @@
 
     &__content {
         width: 70%;
+        min-height: 80vh;
         background-color: #fff;
         border-radius: 10px;
 
