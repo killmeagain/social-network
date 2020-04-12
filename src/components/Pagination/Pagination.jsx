@@ -26,9 +26,9 @@ const Pagination = props => {
     let handlerButtonCurrentPageClick = page => changePage(page);
 
     // Массив с кнопками
-    let paginationElementsArray = paginationCounterArray.map(page => {
+    let paginationElementsArray = paginationCounterArray.map((page, index) => {
         return (
-            <li className="pagination__item">
+            <li key={index} className="pagination__item">
                 <button onClick={() => handlerButtonCurrentPageClick(page)} type="button" className={`pagination__link ${page === currentPage && "pagination__link_active"}`}>{page}</button>
             </li>
         )

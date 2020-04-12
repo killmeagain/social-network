@@ -16,11 +16,12 @@ module.exports = {
   },
 
   entry: {
-    'app': `${PATHS.src}/index.js`
+    app: `${PATHS.src}/index.js`
   },
   output: {
     filename: '[name].[hash].js',
-    path: PATHS.dist
+    path: PATHS.dist,
+    publicPath: '/'
   },
 
   resolve: {
@@ -52,8 +53,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: `${PATHS.assets}fonts`,
-          publicPath: '../fonts/'
+          outputPath: `./${PATHS.assets}fonts`,
         },
       },
 
@@ -62,10 +62,9 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: `${PATHS.dist}/${PATHS.assets}img`,
-          publicPath: '../img/'
+          outputPath: `./${PATHS.assets}img`,
         },
-        exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}fonts`)
+        exclude: path.resolve(__dirname, `${PATHS.src}/fonts`)
       },
 
       {
@@ -123,7 +122,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`
+      filename: `./${PATHS.assets}css/[name].[hash].css`
     }),
 
     new HtmlWebpackPlugin({

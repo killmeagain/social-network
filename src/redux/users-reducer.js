@@ -65,17 +65,17 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 paginationCounter: state.paginationCounter + 4
-            }
+            };
         case SET_PAGINATION_COUNTER_DECREMENT:
             return {
                 ...state,
                 paginationCounter: state.paginationCounter - 4
-            }
+            };
         case SET_IS_FETCHING:
             return {
                 ...state,
                 isFetching: action.isFetching
-            }
+            };
         default:
             return state;
     }

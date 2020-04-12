@@ -2,11 +2,11 @@ import React from 'react';
 import ProfileAvatar from '../ProfileAvatar/ProfileAvatar';
 import PostsContainer from '../Posts/PostsContainer';
 
-const ProfilePage = () => {
+const ProfilePage = props => {
 	return (
 		<div className="profile-page">
 			<div className="profile-page__avatar">
-				<ProfileAvatar />
+				<ProfileAvatar profile={props.profile}/>
 			</div>
 			
 			<div className="profile-page__posts">

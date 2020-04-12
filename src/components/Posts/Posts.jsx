@@ -7,7 +7,7 @@ const Posts = (props) => {
 	// Мапим массив с постами в массив с элементами JSX
 	const arrayPosts = posts.map(post => {
 		return (
-			<li className="posts__item">
+			<li key={post.id} className="posts__item">
 				<Post post={post.post} />
 			</li>
 		)

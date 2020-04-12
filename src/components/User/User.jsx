@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const User = (props) => {
     // Деструктуризирую пропсы для компоненты
@@ -21,7 +22,9 @@ const User = (props) => {
         <div className="user">
             <div className="user__information">
                 <div className="user__avatar">
-                    <img className="user__img" src={avatar} alt="Ваш аватар" />
+                    <NavLink className="user__link" to={"/profile/" + id}>
+                        <img className="user__img" src={avatar} alt="Ваш аватар" />
+                    </NavLink>
                 </div>
                 <div className="user__location-and-name">
                     <p className="user__name">{name}</p>

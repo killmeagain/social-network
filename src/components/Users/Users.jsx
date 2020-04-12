@@ -37,7 +37,7 @@ const Users = props => {
 
     let listUsersArray = users.map(user => {
         return (
-            <li className="users__item">
+            <li key={user.id} className="users__item">
                 <User
                     id={user.id}
                     status={user.status}

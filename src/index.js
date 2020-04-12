@@ -1,5 +1,6 @@
 
 import './scss/main.scss'
+
 import store from './redux/store'
 import React from 'react';
 import ReactDOM from 'react-dom'
